@@ -8,9 +8,17 @@ function App() {
   return (
     <BookContextProvider>
       <div className="container">
-        <h1 className="title is-1">BookList App</h1>
-        <AddBook/>
-        <BookList />
+        <div className="columns is-centered">
+          <div className="column is-half">
+            <h1 className="title is-1">BookList App</h1>
+          </div>
+        </div>
+        <div className="columns is-centered">
+          <div className="column is-half">
+            <AddBook />
+            <BookList />
+          </div>
+        </div>
       </div>
     </BookContextProvider>
   );

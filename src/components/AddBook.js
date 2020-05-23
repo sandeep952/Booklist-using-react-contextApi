@@ -11,7 +11,10 @@ const AddBook = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addBook(name))
+    if (!name) {
+      return;
+    }
+    dispatch(addBook(name));
     setName("");
   };
 
@@ -29,7 +32,11 @@ const AddBook = () => {
           />
         </div>
 
-        <button type="submit" className="button is-primary" onClick={handleSubmit}>
+        <button
+          type="submit"
+          className="button is-primary"
+          onClick={handleSubmit}
+        >
           Add
         </button>
       </form>
