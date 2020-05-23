@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react";
 import { BookContext } from "../context/BookContext";
+import { addBook } from "../reducer/bookActions";
 
 const AddBook = () => {
-  const { addBook } = useContext(BookContext);
+  const { dispatch } = useContext(BookContext);
   const [name, setName] = useState("");
   const handleChange = (event) => {
     setName(event.target.value);
@@ -10,7 +11,7 @@ const AddBook = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addBook(name);
+    dispatch(addBook(name))
     setName("");
   };
 
