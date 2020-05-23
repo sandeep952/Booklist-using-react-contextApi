@@ -19,9 +19,9 @@ const AddBook = () => {
   };
 
   return (
-    <div className='block'>
+    <div className="block">
       <form>
-        <div className="columns is-centered ">
+        <div className="columns is-centered is-vcentered">
           <div className="column ">
             <div className="field">
               <input
@@ -34,16 +34,13 @@ const AddBook = () => {
               />
             </div>
           </div>
-
-          <div className="column">
-            <button
-              type="submit"
-              className="button is-primary"
-              onClick={handleSubmit}
-            >
-              Add
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="button is-primary"
+            onClick={handleSubmit}
+          >
+            Add
+          </button>
         </div>
       </form>
     </div>
