@@ -8,7 +8,7 @@ const Book = ({ name, id }) => {
     <div className="block">
       <div className="notification">
         <button className="delete" onClick={() => dispatch(removeBook(id))} />
-        <div className="title is-2">{name}</div>
+        <div className="title is-2 has-text-centered">{name}</div>
       </div>
     </div>
   );

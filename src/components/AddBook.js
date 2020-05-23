@@ -19,26 +19,32 @@ const AddBook = () => {
   };
 
   return (
-    <div>
+    <div className='block'>
       <form>
-        <div className="field">
-          <label className="label"> Name</label>
-          <input
-            type="text"
-            className="input"
-            placeholder="Enter Book name"
-            value={name}
-            onChange={handleChange}
-          />
-        </div>
+        <div className="columns is-centered ">
+          <div className="column ">
+            <div className="field">
+              <input
+                type="text"
+                className="input"
+                placeholder="Enter Book name"
+                value={name}
+                required
+                onChange={handleChange}
+              />
+            </div>
+          </div>
 
-        <button
-          type="submit"
-          className="button is-primary"
-          onClick={handleSubmit}
-        >
-          Add
-        </button>
+          <div className="column">
+            <button
+              type="submit"
+              className="button is-primary"
+              onClick={handleSubmit}
+            >
+              Add
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );
